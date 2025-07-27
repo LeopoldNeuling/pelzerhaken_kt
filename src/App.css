@@ -1,0 +1,17 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	position: fixed;
+}
+
+.activityDisplay {
+	word-break: break-word;
+	white-space: normal;
+	margin-top: 0;
+}
+
+.activityTime {
+	margin-bottom: 0;
+}
