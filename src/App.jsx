@@ -232,9 +232,7 @@ function App() {
 	// *** MOBILE TUTORIALS *** ------------------------------------------------------------------------------------------------------
 
 	const [mobileDialogOpen, setMobileDialogOpen] = useState(false);
-	const [mobileDialogType, setMobileDialogType] = useState();
-	const openMobileDialog = (type) => {
-		setMobileDialogType(type);
+	const openMobileDialog = () => {
 		setMobileDialogOpen(true);
 	};
 	const closeMobileDialog = () => {
@@ -396,51 +394,35 @@ function App() {
 			<Fragment>
 				<Dialog open={mobileDialogOpen} onClose={closeMobileDialog}>
 					<DialogTitle>
-						{`Wie speichere ich diese Website als App auf meinem ${
-							mobileDialogType === "apple"
-								? "iPhone"
-								: "Android Gerät (Google Chrome Browser)"
-						}?`}
+						Wie speichere ich diese Website als App auf meinem iPhone?
 					</DialogTitle>
 					<DialogContent>
 						<Card>
 							<CardMedia
-								sx={{ height: mobileDialogType === "apple" ? 100 : 700 }}
-								image={`/tutorials/${
-									mobileDialogType === "apple"
-										? "for_apple_step_1.PNG"
-										: "for_android.PNG"
-								}`}
+								sx={{ height: 100 }}
+								image="/tutorials/for_apple_step_1.PNG"
 							/>
 							<CardContent>
 								<p>
-									{mobileDialogType === "apple" ? (
-										<span>
-											1. Klicken Sie auf das "Teilen" Icon
-											<IosShare />
-										</span>
-									) : (
-										"Folgen Sie der Schritt für Schritt Anleitung (02-08)"
-									)}
+									<span>
+										1. Klicken Sie auf das "Teilen" Icon
+										<IosShare />
+									</span>
 								</p>
 							</CardContent>
 						</Card>
-						{mobileDialogType === "apple" ? (
-							<Card sx={{ marginTop: "5vh" }}>
-								<CardMedia
-									sx={{ height: 100 }}
-									image="/tutorials/for_apple_step_2.PNG"
-								/>
-								<CardContent>
-									<p>
-										2. Klicken Sie auf "Zum Home-Bildschirm"
-										<AddBoxOutlined />
-									</p>
-								</CardContent>
-							</Card>
-						) : (
-							<></>
-						)}
+						<Card sx={{ marginTop: "5vh" }}>
+							<CardMedia
+								sx={{ height: 100 }}
+								image="/tutorials/for_apple_step_2.PNG"
+							/>
+							<CardContent>
+								<p>
+									2. Klicken Sie auf "Zum Home-Bildschirm"
+									<AddBoxOutlined />
+								</p>
+							</CardContent>
+						</Card>
 					</DialogContent>
 					<DialogActions>
 						<Button onClick={closeMobileDialog}>Zurück</Button>

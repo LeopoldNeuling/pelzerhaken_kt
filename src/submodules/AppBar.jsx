@@ -93,7 +93,7 @@ function AppBar({ toggleDialog, togglePassword, degradeUser, userStatus }) {
 								disablePadding
 								onClick={() => {
 									handleClose();
-									toggleDialog("apple");
+									toggleDialog();
 								}}
 							>
 								<ListItemButton>
@@ -103,23 +103,6 @@ function AppBar({ toggleDialog, togglePassword, degradeUser, userStatus }) {
 									<ListItemText
 										primary="App für IOS"
 										secondary="Website als App auf den Home-Screen"
-									/>
-								</ListItemButton>
-							</ListItem>
-							<ListItem
-								disablePadding
-								onClick={() => {
-									handleClose();
-									toggleDialog("android");
-								}}
-							>
-								<ListItemButton>
-									<ListItemIcon>
-										<Android />
-									</ListItemIcon>
-									<ListItemText
-										primary="App für Android"
-										secondary="Website auf mein Android Gerät speichern mithilfe von Google Chrome"
 									/>
 								</ListItemButton>
 							</ListItem>
