@@ -30,11 +30,3 @@ This project focuses on a simple and user-friendly web experience with a respons
 ## Preview
 
 Click the image above to open the live version of the website.
-
-## Run Locally
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-```
